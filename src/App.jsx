@@ -1,14 +1,14 @@
-import Header from "./component/header"
-import Hero from "./component/hero"
-import Search from "./component/search"
-import Footer from "./component/footer"
+import Home from './component/home';
+import ExersicesList from './component/exersice';
+ import {Route,Routes} from 'react-router-dom';
 function App() {
   return (
     <>
-      <Header/>
-      <Hero/>
-      <Search/>
-      <Footer/>
+      <Home/>
+      <Routes>
+        <Route path="/" elements={<Home/>}/>
+        <Route path="/exersice/:id" elements={<ExersicesList/>}/>
+      </Routes>
     </>
   )
 }
